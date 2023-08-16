@@ -64,10 +64,10 @@ const html = import.meta.env.PROD
 		
 		<h1>{title}</h1>
 
-		<div class="flex-spacebetween">
+		<div class="flex">
 			<time datetime={pubDateISO}>{pubDateJA}</time>
 
-			<div class="flex">
+			<div class="tag">
 				{
 					category.map((categorySlug) => {
 						const categoryName = categories.find(

@@ -2,10 +2,13 @@
 	/* スペーシング（間隔） */
 	:where(body, .container, header, footer, article) > * + * {
 		margin-block-start: 1em;
+		margin-inline-start: 1em;
 	}
 
 	:where(main) > * + * {
+		
 		margin-block-start: 2.5em;
+		
 	}
 
 	/* レイアウト： 両端揃え */
@@ -22,10 +25,29 @@
 		
 	}
 
+
 	/* レイアウト： 横並び */
 	.flex {
 		display: flex;
 		gap: 1em;
+	}
+	/* レイアウト： 横並び */
+	.tag {
+		display: flex;
+		gap: 1em;
+	
+		display: inline-block;
+		margin: 0 .1em .6em 0;
+		padding: .6em;
+		line-height: 1;
+		text-decoration: none;
+		color: #0000ee;
+		background-color: #fff;
+		border: 1px solid #0000ee;
+	}
+
+	.tag:before {
+		content: "#";	
 	}
 
 	/* レイアウト： ２段組み */
@@ -54,6 +76,8 @@
 	header,
 	footer {
 		padding-block: 1.5em;
+		padding-inline: 1.5em;
+		
 	}
 
 	header ul {
@@ -90,6 +114,7 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
+		
 	}
 
 	main article {
