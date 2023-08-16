@@ -15,9 +15,11 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 1em;
+		
 	}
 	.flex-spacebetween > :last-child {
 		margin-left: auto;
+		
 	}
 
 	/* レイアウト： 横並び */
