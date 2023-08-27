@@ -5,44 +5,143 @@ pubDate: '2023-08-22'
 image: /assets/ruby.jpg
 category:
   - ruby
-description: Node.js製のpython-shellモジュールを使うことで、JavaScriptからPythonへのデータの送受信が可能に。Pythonスクリプトを実行し、結果を受け取る方法も解説します。
+description: rubyの基本文法について
 ---
 
-Python を JavaScript から実行するということは、Web サーバー上で Python スクリプトを動かすことが可能となることです。
+Rubyの基本的な文法をさらっと。
 
-今回紹介するのは、Node.js 製の「python-shell」と呼ばれるモジュールを使った方法です。
 
-python-shell とは、Node.js アプリケーションから Python スクリプトを実行して結果を得る為のモジュールです。
-Node.js を使えば、JavaScript コードから Python へのデータ送信や、Python からのデータ受信が容易に行えます。
-python-shell を使って Python スクリプトを実行する方法は非常に簡単です。まず、Node.js と python-shell をインストールします。Node.js と python-shell をインストールしたら、次のようなコード上で Python スクリプトを実行できます。
+## 1. 変数とデータ型
+Rubyは動的型付け言語なので、データ型を指定せずに変数を宣言できる。
 
-```javascript
-const PythonShell = require('python-shell'); // Pythonスクリプトを実行する
-const options = { scriptPath: '/path/to/python/scripts/' };
-const pyshell = new PythonShell('my_python_script.py', options); // Pythonスクリプトへの入力を設定
-pyshell.send('Hello World!'); // データ受信時の処理
-pyshell.on('message', function (message) {
-	// 受信したデータを処理
-	console.log(message);
-}); // 終了時の処理
-pyshell.end(function (err) {
-	if (err) {
-		throw err;
-	}
-	console.log('finished');
-});
+```ruby
+name = "Alice"
+name.class #=> String
+
+bool = true
+bool.class #=> TrueClass
+
+age = 20
+age.class #=> Int
+
+height = 155.6
+height.class #=> Float
 ```
 
-上記のようにすると、Node.js アプリケーションから Python スクリプトを実行して結果を受け取ることができます。あとは、my_python_script.py に記述されたスクリプトの中身によって処理内容が変わります。
+## 2. 文字列
+ダブルクォーテーションまたはシングルクォーテーションで文字列を作成。
+ダブルクォーテーション内では変数の値を展開できるという違いがある。
 
-例えば、以下のような Python スクリプトを作成すると、Node.js 側から送信した文字列を受信して、そのまま返す処理を実行できます。
+```ruby
+single_quoted = 'シングルクォーテーション'
+double_quoted = "ダブルクォーテーション"
 
-```python
-# -*- coding: utf-8 -*-
-import sys # 入力を受け取る
-input_string = sys.stdin.readline() # 入力をそのまま出力する print(input_string)
+name = "Bob"
+greeting = "Hello, #{name}!"
 ```
 
-python-shell を使えば、Node.js アプリケーションから Python スクリプトを実行し、その結果を受け取ることが可能となります。また、Python スクリプトへの入力も設定可能です。その結果、Node.js から Python へのデータの送受信が容易に行えます。
+文字列同士で結合できる。
+```ruby
+first_name = '太郎'
+last_name = '田中'
 
-今回も Python を JavaScript から実行する方法として、Node.js 製の python-shell モジュールを使う方法を紹介しました。python-shell を使えば、Node.js から Python へのデータ送信や、Python からのデータ受信などが簡単に行えます。Node.js 製のモジュールは、他にいくつも存在しますので、色々な用途に使ってみてください。
+name = last_name + first_name 
+puts "Hello, #{name}!"
+```
+
+
+## 3. 数値演算
+
+```ruby
+x = 10
+y = 5
+sum = x + y
+difference = x - y
+product = x * y
+quotient = x / y
+```
+
+## 4. ブロック
+
+
+## 5. 条件文
+if文。他の言語のelse ifとちがい、elsifを用いる。
+
+```ruby
+if age >= 18
+  puts "成年です"
+elsif age == 17
+　puts "永遠の17歳です"
+else
+  puts "未成年です"
+end
+```
+
+## 6. ループ
+他言語と違い、for文は使わずにメソッドを用いることが多い。
+```ruby
+5.times do
+  puts "hello"
+end
+```
+```ruby
+fruits = ["りんご", "バナナ", "オレンジ"]
+fruits.each do |fruit|
+  puts fruit
+end
+```
+while文
+```ruby
+i = 0
+while i < 10 do
+  puts i
+  i += 1
+end
+```
+
+## 7. 配列
+複数の値をまとめて扱うためのデータ構造。
+
+```ruby
+fruits = ["りんご", "バナナ", "オレンジ"]
+puts fruits[0] # "りんご"が表示される
+
+fruits.push("グレープ") # 配列に要素を追加
+fruits.pop("バナナ") # 配列から要素を削除
+```
+
+## 8. メソッド
+関数のようなもので再利用可能。
+
+```ruby
+def area(x, y)
+  x * y
+end
+
+puts(5, 6) 
+```
+returnを省略できる。
+
+## 9. クラスとオブジェクト
+
+```ruby
+class Person
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def introduce
+    puts "私は#{@name}で、#{@age}歳です。"
+  end
+end
+
+person = Person.new("David", 25)
+person.introduce()
+```
+
+
+
+
+
+
