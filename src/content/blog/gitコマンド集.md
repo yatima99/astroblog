@@ -4,7 +4,7 @@ slug: git-commands
 pubDate: '2023-08-12'
 image: /assets/git.png
 category:
-  - ruby
+  - git
 description: よく使うgitコマンドを羅列
 ---
 
