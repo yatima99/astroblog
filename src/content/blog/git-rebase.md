@@ -2,7 +2,7 @@
 title: 複数のcommitを一つにまとめる方法
 slug: git-rebase
 pubDate: '2023-08-28'
-image: /assets/git.jpg
+image: /assets/git.png
 category:
   - git
 description: 複数のcommitを一つにまとめる方法について解説
