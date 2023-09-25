@@ -8,7 +8,7 @@ category:
 description: Node.js製のpython-shellモジュールを使うことで、JavaScriptからPythonへのデータの送受信が可能に。Pythonスクリプトを実行し、結果を受け取る方法も解説します。
 ---
 
-## 構築する環境のバージョン情報
+### 環境
 
 - Ruby: 3.1.0
 - Ruby on Rails: 7.0.4

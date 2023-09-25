@@ -8,31 +8,36 @@ category:
 description: ハッシュについて解説
 ---
 
-ハッシュ関連のメソッド
+ハッシュの基本
 
 ```ruby
 person = {
   "name" => "Alice",
-  "age" => 30,
+  "age" => 10,
   "city" => "Wonderland"
 }
+```
 
-# ハッシュのキーを取得
+### ハッシュのキーを取得
+```ruby
 keys = person.keys
 puts keys.inspect  # 出力: ["name", "age", "city"]
-
-# ハッシュの値を取得
+```
+### ハッシュの値を取得
+```ruby
 age = person["age"]
-puts age  # 出力: 30
-
-# ハッシュにキーと値を追加
+puts age  # 出力: 10
+```
+### ハッシュにキーと値を追加
+```ruby
 person["occupation"] = "Adventurer"
 puts person.inspect
-# 出力: {"name"=>"Alice", "age"=>30, "city"=>"Wonderland", "occupation"=>"Adventurer"}
-
-# ハッシュからキーと値を削除
+# 出力: {"name"=>"Alice", "age"=>10, "city"=>"Wonderland", "occupation"=>"Adventurer"}
+```
+### ハッシュからキーと値を削除
+```ruby
 person.delete("city")
 puts person.inspect
-# 出力: {"name"=>"Alice", "age"=>30, "occupation"=>"Adventurer"}
+# 出力: {"name"=>"Alice", "age"=>10, "occupation"=>"Adventurer"}
 
 ```
