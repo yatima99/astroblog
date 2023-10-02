@@ -1,7 +1,7 @@
 export const siteMeta = {
   siteTitle: 'Yatima log',
   siteDesc: ' Yatima の技術ブログ',
-  siteUrl: 'https://localhost:3000',
+  siteUrl: 'https://yatilog.com',
   siteType: 'website',
   siteLocale: 'ja_JP',
   siteIcon: '/favicon.png',
