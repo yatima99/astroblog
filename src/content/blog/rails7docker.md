@@ -2,9 +2,9 @@
 title: dockerでrails7環境構築
 slug: docker-rails7
 pubDate: '2023-08-22'
-image: /assets/rails.png
+image: /assets/docker.png
 category:
-  - rails
+  - docker
 description: Node.js製のpython-shellモジュールを使うことで、JavaScriptからPythonへのデータの送受信が可能に。Pythonスクリプトを実行し、結果を受け取る方法も解説します。
 ---
 
