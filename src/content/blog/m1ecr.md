@@ -5,6 +5,7 @@ pubDate: '2024-01-31'
 image: /assets/docker.png
 category:
   - docker
+  - aws
 description: Next.jsコンテナイメージをecrにデプロイできなかった話
 ---
 
