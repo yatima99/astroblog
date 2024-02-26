@@ -2,9 +2,9 @@
 title: githubに秘密情報をpushしてしまった話
 slug: github-actions
 pubDate: '2024-02-26'
-image: /assets/aws.png
+image: /assets/git.png
 category:
-  - aws
+  - git
 description: githubに秘密情報をpushしてしまった話
 ---
 AWSのECSへのデプロイを自動化するためにgithub Actionsを使ってみようと思い､
