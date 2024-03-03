@@ -4,7 +4,7 @@ export const siteMeta = {
   siteUrl: 'https://yatilog.com',
   siteType: 'website',
   siteLocale: 'ja_JP',
-  siteIcon: '/favicon.png',
+  siteIcon: '/favicon.ico',
   siteImg: '/ogp.jpg',
 };
 
