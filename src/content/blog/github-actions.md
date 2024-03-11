@@ -66,15 +66,15 @@ ECSのタスクをjson形式でコピーし､
 
 [リポジトリからの機微なデータの削除 - GitHub Docs](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 
-公式を参考にリポジトリから機密情報を削除した｡
+を参考にリポジトリから機密情報を削除した｡
 
-**自分は[git filter-repo](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#using-git-filter-repo)の手法を用いた｡**
+自分は[git filter-repo](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#using-git-filter-repo)の手法を用いた｡
 
 プルリクから削除するのにサポートに連絡する必要があり身構えたが､実際はAIアシスタントでポチポチ回答するだけで削除申請が通り簡単だった｡
 
 再発防止のため､機密情報のリアルタイム感知を行うGitGuardianをインストールした｡
 
-で､このような機密情報をtask-definition.jsonに記載せずGithub ActionsでCDを行う方法だが､
+本題はこのような機密情報をtask-definition.jsonに記載せずGithub ActionsでCDを行う方法だが､
 
 git secretに機密情報を登録し､cd.ymlに
 ```yml
@@ -87,3 +87,8 @@ git secretに機密情報を登録し､cd.ymlに
       shell: bash
 ```
 のようにsedコマンドで注入することで､機密情報をgithubにさらすことなく自動デプロイができるようになった｡
+
+[追記]
+アクセスキーが流出したことをAWSが感知すると､IAMユーザーに「AWSCompromisedKeyQuarantineV2」ポリシーが自動的に付与され､S3バケットなどのアクセス権限を失うようになっているよう｡
+これで急にアプリのアップロード機能が動作しなくなり焦った｡
+アクセスキーを変更するだけではダメで､IAMユーザー自体を作り直し､アクセスキーを再発行するのが正解でした｡
