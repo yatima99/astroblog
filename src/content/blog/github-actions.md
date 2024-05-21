@@ -1,11 +1,11 @@
 ---
-title: githubに秘密情報をpushしてしまった話
+title: Githubに秘密情報をうっかりpushしてしまった時の対処法[体験談]
 slug: github-actions
 pubDate: '2024-02-26'
 image: /assets/git.png
 category:
   - git
-description: githubに秘密情報をpushしてしまった話
+description: Githubに秘密情報をうっかりpushしてしまった時の対処法
 ---
 AWSのECSへのデプロイを自動化するためにgithub Actionsを使ってみようと思い､
 
