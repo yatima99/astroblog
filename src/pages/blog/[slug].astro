@@ -58,29 +58,28 @@ const html = import.meta.env.PROD
 	: markdownToHtml(body);
 
 ---
-
 <Layout pageTitle={title} description={description} pageImg={image}>
 	<article>
 		
-		<h1>{title}</h1>
+		<h1 class="text-center">{title}</h1>
 
-		<div class="flex">
-			<time datetime={pubDateISO}>{pubDateJA}</time>
-
-			<div class="tag">
+		<div class="flex-container">
+			<div class="tag-container">
 				{
 					category.map((categorySlug) => {
 						const categoryName = categories.find(
 							(cat) => cat.categorySlug === categorySlug
 						).categoryName;
 						return (
-							<a rel="prefetch" href={`/blog/category/${categorySlug}`}>
+							<a rel="prefetch" href={`/blog/category/${categorySlug}`} class="tag">
 								{categoryName}
 							</a>
 						);
 					})
 				}
 			</div>
+
+			<time datetime={pubDateISO}>{pubDateJA}</time>
 		</div>
 
 		<div class="znc large-space">
@@ -90,3 +89,21 @@ const html = import.meta.env.PROD
 		<Pagination {...url} />
 	</article>
 </Layout>
+<style>
+	.text-center {
+		text-align: center;
+	}
+	.flex-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.tag-container {
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+	}
+	.tag {
+		margin: 0 5px;
+	}
+</style>
