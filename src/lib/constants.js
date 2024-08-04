@@ -17,4 +17,6 @@ export const categories =[
   { categoryName: 'Ruby', categorySlug: 'ruby' },
   { categoryName: 'Git', categorySlug: 'git' },
   { categoryName: 'Diary', categorySlug: 'diary' },
+  { categoryName: 'Linux', categorySlug: 'linux' },
+  { categoryName: 'Go', categorySlug: 'go' },
 ];

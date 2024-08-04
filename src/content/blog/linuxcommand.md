@@ -4,7 +4,7 @@ slug: linux command
 pubDate: '2024-08-05'
 image: /assets/git.png
 category:
-  - git
+  - linux
 description: Linuxの便利なショートカットについて
 ---
 
