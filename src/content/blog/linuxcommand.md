@@ -1,5 +1,5 @@
 ---
-title: linux便利コマンド 
+title: linuxコマンド小ネタ集 
 slug: linux command
 pubDate: '2024-08-05'
 image: /assets/git.png
@@ -9,9 +9,8 @@ description: Linuxの便利なショートカットについて
 ---
 
 
-## Linux小ネタ
 
-### コマンドラインのショートカット
+## コマンドラインのショートカット
 - Ctrl + u　カーソルまで削除
 -  Ctrl + k  　カーソル以降を削除
 - Ctrl + w 	単語ごと削除（スペース区切り）
@@ -24,7 +23,7 @@ description: Linuxの便利なショートカットについて
 
 - Ctrl + r　以前のコマンドを呼び出す
 
-### その他
+## その他
 - cd - など、「-」で以前の場所に移動できる
 
 - echo -eオプションで勝手に文字列をエスケープしてくれる
