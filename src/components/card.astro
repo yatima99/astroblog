@@ -1,5 +1,5 @@
 ---
-const { url, title, publishDate } = Astro.props;
+const { url, title, publishDate, category } = Astro.props;
 
 // 日付をフォーマットする関数
 function formatDate(date) {
@@ -10,46 +10,63 @@ function formatDate(date) {
   });
 }
 ---
-
-  <article class="card">
-    <a href={url} rel="prefetch">
-      <h2 class="card-title">{title}</h2>
+<article class="card">
+  <a href={url} rel="prefetch">
+    <h2 class="card-title">{title}</h2>
+    <div class="card-footer">
+      <span class="card-category">#{category}</span>
       {publishDate && <time class="card-date">{formatDate(publishDate)}</time>}
-    </a>
-  </article>
-  
-  <style>
-    .card {
+    </div>
+  </a>
+</article>
 
+<style>
+  .card {
+   
     height: 150px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 16px;
     transition: background-color 0.3s ease;
+  }
+
+  .card:hover {
+    background-color: #f5f5f5;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
   }
-    
-  
-    .card:hover {
-      background-color: #f5f5f5;
-    }
-  
-    .card a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-  
-    .card-title {
-      margin: 0 0 8px;
-      font-size: 1.5rem;
-      color: #333;
-    }
-  
-    .card-date {
-      font-size: 0.8rem;
-      color: #666;
-    }
-  </style>
+
+  .card-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+  }
+
+  .card-category {
+    font-size: 1.1rem;
+    color: #007bff;
+  }
+
+  .card-date {
+    font-size: 0.8rem;
+    color: #666;
+  }
+</style>

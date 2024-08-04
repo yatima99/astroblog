@@ -29,12 +29,11 @@ const {
 			data.map((post) => {
 				const {
 					slug,
-					data: { image, title },
+					data: {title , pubDate, category},
 				} = post;
-				return <Card url={`/blog/${slug}`} src={image} title={title} />;
+				return <Card url={`/blog/${slug}`}  title={title} publishDate={pubDate} category={category}/>;
 			})
 		}
 	</div>
-
 	<Pagination prev={prev} next={next} />
 </Layout>
