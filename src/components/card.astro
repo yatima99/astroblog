@@ -1,10 +1,55 @@
 ---
-const { url, src, alt = '', title } = Astro.props;
+const { url, title, publishDate } = Astro.props;
+
+// 日付をフォーマットする関数
+function formatDate(date) {
+  return new Date(date).toLocaleDateString('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
 ---
 
-<article class="card">
-  <a rel="prefetch" href={url}>
-    <img src={src} alt={alt} />
-    <h2>{title}</h2>
-  </a>
-</article>
+  <article class="card">
+    <a href={url} rel="prefetch">
+      <h2 class="card-title">{title}</h2>
+      {publishDate && <time class="card-date">{formatDate(publishDate)}</time>}
+    </a>
+  </article>
+  
+  <style>
+    .card {
+
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    
+  
+    .card:hover {
+      background-color: #f5f5f5;
+    }
+  
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  
+    .card-title {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+  
+    .card-date {
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
