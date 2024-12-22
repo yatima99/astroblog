@@ -1,5 +1,5 @@
 export const siteMeta = {
-  siteTitle: 'Yatima log',
+  siteTitle: '技術ブログ',
   siteDesc: ' Yatima の技術ブログ',
   siteUrl: 'https://yatilog.com',
   siteType: 'website',
