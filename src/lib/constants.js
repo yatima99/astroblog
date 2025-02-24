@@ -1,3 +1,5 @@
+import { ca } from "date-fns/locale";
+
 export const siteMeta = {
   siteTitle: '技術ブログ',
   siteDesc: ' Yatima の技術ブログ',
@@ -19,4 +21,6 @@ export const categories =[
   { categoryName: 'Diary', categorySlug: 'diary' },
   { categoryName: 'Linux', categorySlug: 'linux' },
   { categoryName: 'Go', categorySlug: 'go' },
+  { categoryName: 'React', categorySlug: 'react'},
+  { categoryName: 'TypeScript', categorySlug: 'typescript'},
 ];

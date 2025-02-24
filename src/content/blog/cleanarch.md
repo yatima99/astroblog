@@ -4,7 +4,7 @@ slug: cleanarch
 pubDate: '2025-01-22'
 image: /assets/git.jpg
 category:
-  - git
+  - go
 description: クリーンアーキテクチャ概説
 ---
 業務でクリーンアーキテクチャを触ることがあったのでメモ。

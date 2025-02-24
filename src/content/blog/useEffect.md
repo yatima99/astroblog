@@ -4,7 +4,7 @@ slug: useEffectError
 pubDate: '2024-12-22'
 image: /assets/git.jpg
 category:
-  - git
+  - react
 description: useEffectのエラーについて
 ---
 
